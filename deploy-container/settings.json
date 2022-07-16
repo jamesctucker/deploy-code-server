@@ -1,7 +1,10 @@
 {
-  "workbench.colorTheme": "Default Dark+",
   "git.postCommitCommand": "sync",
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "editor.fontSize": 16,
+  "editor.inlineSuggest.enabled": true,
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "terminal.integrated.fontSize": 16
 }
