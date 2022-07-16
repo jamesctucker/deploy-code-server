@@ -38,7 +38,7 @@ RUN code-server --install-extension esbenp.prettier-vscode
 RUN code-server --install-extension eamodio.gitlens
 RUN code-server --install-extension golang.Go
 # launch a local development server
-RUN code-server --install-extensionritwickdey.LiveServer
+RUN code-server --install-extension ritwickdey.LiveServer
 # my preferred VS Code theme
 RUN code-server --install-extension enkia.tokyo-night
 
