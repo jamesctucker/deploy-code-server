@@ -29,7 +29,7 @@ RUN sudo apt-get install -y nodejs
 
 # Install Yarn
 RUN sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-RUN sudo apt update && sudo apt install -y yarn
+RUN sudo apt update && sudo apt-get -y install yarn
 
 # Install Postgres
 # Create the file repository configuration:
@@ -40,7 +40,7 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo 
 RUN sudo apt-get update
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
-RUN sudo apt-get -y install postgresql
+RUN sudo apt-get install -y postgresql
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
