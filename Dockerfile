@@ -21,6 +21,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
+# Install wget
+RUN sudo apt-get install wget -y
 # Install Node
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash -
 RUN sudo apt-get install -y nodejs
