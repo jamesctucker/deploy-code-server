@@ -35,9 +35,7 @@ RUN sudo apt update && sudo apt-get -y install yarn
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension esbenp.prettier-vscode
-RUN code-server --install-extension johnsoncodehk.volar
 RUN code-server --install-extension eamodio.gitlens
-RUN code-server --install-extension rebornix.ruby
 RUN code-server --install-extension golang.Go
 # my preferred VS Code theme
 RUN code-server --install-extension enkia.tokyo-night
