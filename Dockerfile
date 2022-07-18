@@ -23,12 +23,6 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # -----------
 # Install Homebrew
 RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Config Homebrew in .profile
-RUN test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-RUN test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-RUN test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
-RUN echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
-
 # Install Yarn
 RUN sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
