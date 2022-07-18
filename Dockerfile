@@ -27,7 +27,6 @@ RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.co
 COPY deploy-container/script.sh /usr/bin/script.sh
 RUN sudo chmod a+x /usr/bin/script.sh
 RUN /usr/bin/script.sh
-
 # Install NVM
 RUN brew install nvm
 # Install Yarn
