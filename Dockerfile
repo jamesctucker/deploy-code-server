@@ -23,9 +23,19 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # You can add custom software and dependencies for your environment below
 # -----------
 # Install NVM
-RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash \
-  && . ~/.bashrc \ 
-  && nvm install node
+RUN apt-get update --fix-missing
+RUN apt-get install -y curl
+RUN apt-get install -y build-essential libssl-dev
+ENV NVM_DIR /home/.nvm
+
+# Install nvm with node and npm
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash \
+    && source $NVM_DIR/nvm.sh \
+    && nvm install node
+
+
+
+
 # RUN sudo chmod a+x /usr/bin/script.sh 
 # RUN /usr/bin/script.sh
 # RUN /bin/bash -c ". ~/.bashrc"
