@@ -57,4 +57,5 @@ ENV PORT=8080
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
+COPY deploy-container/script.sh /usr/bin/script.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
