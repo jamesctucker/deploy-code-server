@@ -5,6 +5,7 @@ USER coder
 
 # Apply VS Code settings
 COPY deploy-container/settings.json .local/share/code-server/User/settings.json
+COPY deploy-container/script.sh /usr/bin/script.sh
 
 # Use bash shell
 ENV SHELL=/bin/bash
@@ -24,7 +25,6 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install Homebrew
 RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Add Homebrew to PATH
-COPY deploy-container/script.sh /usr/bin/script.sh
 RUN sudo chmod a+x /usr/bin/script.sh
 RUN /usr/bin/script.sh
 # Install NVM
