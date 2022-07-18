@@ -28,7 +28,7 @@ RUN sudo chmod a+x /usr/bin/script.sh
 RUN /usr/bin/script.sh
 RUN /bin/bash -c "source ~/.bashrc"
 # Install NodeJS
-RUN nvm install node
+RUN /bin/bash -c "nvm install node"
 # Install Yarn
 # RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 # RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
