@@ -26,7 +26,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 RUN sudo chmod a+x /usr/bin/script.sh 
 RUN /usr/bin/script.sh
-RUN source ~/.bashrc
+RUN /bin/bash -c source ~/.bashrc
 # Install NodeJS
 RUN nvm install node
 # Install Yarn
