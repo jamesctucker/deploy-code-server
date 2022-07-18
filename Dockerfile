@@ -26,9 +26,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 RUN sudo chmod a+x /usr/bin/script.sh 
 RUN /usr/bin/script.sh
-RUN /bin/bash -c "source ~/.bashrc"
+RUN . ~/.bashrc
 # Install NodeJS
-RUN /bin/bash -c "nvm install node"
+RUN nvm install node
 # Install Yarn
 # RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 # RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
