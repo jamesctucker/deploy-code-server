@@ -24,6 +24,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install Homebrew
 RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Add Homebrew to PATH
+COPY deploy-container/script.sh /usr/bin/script.sh
 RUN deploy-container/script.sh
 
 # Install NVM
@@ -57,5 +58,4 @@ ENV PORT=8080
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
-COPY deploy-container/script.sh /usr/bin/script.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
