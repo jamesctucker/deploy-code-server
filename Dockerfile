@@ -27,14 +27,14 @@ RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.co
 # Add Homebrew to PATH
 RUN sudo chmod a+x /usr/bin/script.sh
 RUN /usr/bin/script.sh
-# Install NVM
-RUN brew install nvm
-# Install Yarn
-RUN brew install yarn
-# Install Postgres
-RUN brew install postgresql
-# Install Vue-CLI
-RUN brew install vue-cli
+# # Install NVM
+# RUN brew install nvm
+# # Install Yarn
+# RUN brew install yarn
+# # Install Postgres
+# RUN brew install postgresql
+# # Install Vue-CLI
+# RUN brew install vue-cli
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension esbenp.prettier-vscode
