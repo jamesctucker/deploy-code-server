@@ -24,9 +24,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install Homebrew
 RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Add Homebrew to PATH
-RUN 'test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"'
-RUN 'test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
-RUN 'test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile'
+# RUN 'test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"'
+# RUN 'test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+# RUN 'test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile'
 RUN 'echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile'
 # Install NVM
 RUN brew install nvm
