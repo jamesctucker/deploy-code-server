@@ -1,6 +1,4 @@
 #!/bin/bash
-
-sudo test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-sudo test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-sudo test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
-sudo echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
